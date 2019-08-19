@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>跨境学费平台 上海银联电子支付服务有限公司提供全程的支付服务</title>
+	<link rel="stylesheet" href="./mXF/public/css/index.css">
+	<script src="./mXF/public/js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./mXF/public/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="mxfbg01">
+<div id="mxf">
+	<div class="navibar navibarindex">
+		<!-- 首页个性化自定义样式 default为默认版本 -->
+		<link rel="stylesheet" href="./mXF/module/default/index.css">
+		<div class="nav">
+			<ul class="left">
+				<li class="nav_icon_fanhui_left">&nbsp;</li>
+			</ul>
+			<ul class="center">
+				选择学校
+			</ul>
+			<ul class="right">
+				<li class="nav_icon_logo_cp">&nbsp;</li>
+			</ul>
+		</div>
+	</div>
+	<div class="schoolsearch" >
+		<div class="listbox01">
+			<div class="left">
+				学校名称
+			</div>
+			<div class="center">
+				<input type="text" placeholder="请输入或选择学校名称" name="" id="shoolvalA" onclick="schoolsearch_open_shoolvalA()">
+				<!-- 点击input#shoolvalA 触发显示部分 start -->
+				<script type="text/javascript">
+					function schoolsearch_open_shoolvalA(){
+						document.getElementsByClassName("shoolvalA")[0].style.display = "block";
+						document.getElementById("shoolvalAB").focus();
+						document.getElementById("shoolvalAB").value='';
+					}
+				</script>
+				<div class="shoolvalA" style="display: none;">
+					<div class="top">
+						<div class="l">
+							学校名称
+						</div>
+						<div class="c">
+							<input type="text" name="" value="" autofocus="autofocus" id="shoolvalAB" >
+						</div>
+						<div class="r">
+							<img src="./mXF/public/img/schoolsearch_icon_next_close.png" onclick="schoolsearch_icon_next_close()" >
+						</div>
+						<script type="text/javascript">
+							function schoolsearch_icon_next_close(){
+								document.getElementById("shoolvalAB").value='';
+							}
+						</script>
+					</div>
+					<ul class="shoolvalAB">
+						<!-- 把所有可选的银行读取在这里 -->
+						<li>University of Cambridge</li>
+						<li>University of Oxford</li>
+						<li>University of California-Berkeley</li>
+						<li>Linfield Christian School</li>
+						<li>University of Manitoba</li>
+						<li>University of Kentucky</li>
+						<li>VGC Language School</li>
+						<li>Continents University</li>
+						<li>Aberystwyth University</li>
+						<li>Lower Canada College</li>
+						<li>The Westside School</li>
+						<li>Lycée Claudel School</li>
+						<li>Capilano University </li>
+						<li>University of Cambridge</li>
+						<script type="text/javascript">
+							$(document).ready(function(){
+								$(".shoolvalAB li").click(function(){
+									document.getElementById("shoolvalAB").value = $(this).text();
+								});
+							});
+						</script>
+					</ul>
+					<div class="bot">
+						<div class="btn" onclick="schoolsearch_shoolvalAB()">完成</div>
+						<script type="text/javascript">
+							function schoolsearch_shoolvalAB(){
+								document.getElementById("shoolvalA").value = document.getElementById("shoolvalAB").value;
+								document.getElementsByClassName("shoolvalA")[0].style.display = "none";
+							}
+						</script>
+					</div>
+				</div>
+				<!-- 点击input#shoolvalA 触发显示部分 end -->
+			</div>
+			<div class="right" id="shoolvalB" onclick="schoolsearch_open_shoolvalA()">
+				<img src="./mXF/public/img/schoolsearch_icon_next_default.png">
+			</div>
+		</div>
+	</div>
+	<div class="btnbox01">
+		<div class="btn" onclick="VerificationBox01()">
+			下一步
+		</div>
+		<!-- 判断提交表单后的弹出部分 start -->
+		<div class="alertbox" id="alertbox" style="display: none;">
+			<div class="box">
+				<div class="main">
+					ERROR MESSAGE
+				</div>
+				<div class="nbtn" onclick="closeAlertbox()">
+					确认
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function closeAlertbox(){
+				document.getElementById("alertbox").style.display = "none";
+			}
+			function VerificationBox01(){
+				if( !document.getElementById("shoolvalA").value ){
+					document.getElementById("alertbox").style.display = "flex";
+				}else{
+					window.location.href="index.1.html"; 
+				}
+			}
+		</script>
+		<!-- 判断提交表单后的弹出部分 end -->
+	</div>	
+	<div class="textbox01">
+		目前通过网络平台开展外汇按金交易未经批准，境内个人跨境境外购房、直接进行跨境证券投资，相关外汇业务属于资本项目项下业务，按照可兑换进程管理，目前尚未明确开放，直接或间接开展、参与上述相关外汇业务，涉嫌违规。请提高风险防范意识，谨防财产损失。
+	</div>
+</div>
+</body>
+</html>

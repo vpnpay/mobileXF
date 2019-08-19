@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>跨境学费平台 上海银联电子支付服务有限公司提供全程的支付服务</title>
+	<script type="text/javascript">
+		document.addEventListener('plusready', function(){
+			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+			
+		});	
+	</script>
+	<link rel="stylesheet" href="./mXF/public/css/index.css">
+	<script src="./mXF/public/js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./mXF/public/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="mxf">
+	<script type="text/javascript">
+		function openconfPay01(){
+			document.getElementById("confPay01").style.display="flex";
+			setTimeout(function(){ document.getElementById("confPay01").style.display="none"; window.location.href="index.13.html"; }, 2000);	
+		}
+		function openbaocuo02(){
+			document.getElementById("baocuo02").style.display="flex";
+		}
+		function closebaocuo01(obj){
+			obj.parentNode.parentNode.style.display="none";	
+		}
+		function Confofpay(){
+			if(  document.getElementById("yhkmima").value){
+				openconfPay01();
+			}else{
+				openbaocuo02();
+			}
+		}
+	</script>
+	<div id="confPay01" class="confPay" style="display: none;">
+		<ul class="sc">
+			<li>处理中，请稍后…</li>
+		</ul>
+	</div>
+	<div id="baocuo02" class="alertshuoming" style="display: none;">
+		<div class="main">
+			<div class="content02">
+				ERROR MESSAGE
+			</div>
+			<div class="btn" onclick="closebaocuo01(this)">
+				确认
+			</div>
+		</div>
+	</div>
+	<div class="navibar">
+		<!-- 头部个性化自定义样式 -->
+		<link rel="stylesheet" href="./mXF/module/default/index.css">
+		<div class="nav">
+			<ul class="left" onclick="window.history.back(-1);">
+				<li class="nav_icon_fanhui_left">&nbsp;</li>
+			</ul>
+			<ul class="center">
+				学费支付
+			</ul>
+			<ul class="right">
+				<li class="nav_icon_logo_cp">&nbsp;</li>
+			</ul>
+		</div>
+	</div>
+	<div class="titlebar03">
+		<div class="l">
+			需支付金额
+		</div>
+		<div class="r">
+			¥6998.00
+		</div>
+	</div>
+	<div class="sbscmainbox">
+		<div class="listbox04">
+			<div class="l">
+				银联卡号
+			</div>
+			<div class="r">
+				<input type="text" name="" id=""  value="622909*******8901" />
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				银行预留手机号
+			</div>
+			<div class="r">
+				<input type="text" name="" id="" value="13712346578" />
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				验证码
+			</div>
+			<div class="r r01">
+				<input type="text" name="" id="yzmpay" placeholder="请输入手机验证码"  />
+			</div>
+			<div class="r02" onclick="dumiao(this)">
+				获取
+			</div>
+			<div class="r02" style="display: none;"></div>
+		</div>
+		<script type="text/javascript">
+			function dumiao(obj){	
+				var dumiaoval = 60;
+				var interval =setInterval(function(){
+					obj.style.display="none";
+					obj.nextElementSibling.style.display="block";
+					dumiaoval--;
+					obj.nextElementSibling.innerHTML=dumiaoval;
+					if(dumiaoval === 0){    
+						clearInterval(interval); 
+						obj.style.display="block";
+						obj.nextElementSibling.style.display="none";
+					}
+				},1000);
+			}
+		</script>
+		<div class="listbox04">
+			<div class="l">
+				银联卡密码
+			</div>
+			<div class="r">
+				<input type="text" name="" id="yhkmima" placeholder="请输入银联卡密码"   />
+			</div>
+		</div>
+		<div class="btnbox01">
+			<div class="btn"  onclick="Confofpay()">
+				确认支付
+			</div>
+		</div>	
+	</div>
+	<div class="textbox01">
+		目前通过网络平台开展外汇按金交易未经批准，境内个人跨境境外购房、直接进行跨境证券投资，相关外汇业务属于资本项目项下业务，按照可兑换进程管理，目前尚未明确开放，直接或间接开展、参与上述相关外汇业务，涉嫌违规。请提高风险防范意识，谨防财产损失。
+	</div>
+	<div class="footerbox">
+		该学校缴费服务由合作商户－易思汇提供
+	</div>	
+</div>
+</body>
+</html>

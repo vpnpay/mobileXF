@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>跨境学费平台 上海银联电子支付服务有限公司提供全程的支付服务</title>
+	<script type="text/javascript">
+		document.addEventListener('plusready', function(){
+			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+			
+		});	
+	</script>
+	<link rel="stylesheet" href="./mXF/public/css/index.css">
+	<script src="./mXF/public/js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./mXF/public/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="mxfbg01">
+<div id="mxf">
+	<div class="navibar">
+		<!-- 头部个性化自定义样式 -->
+		<link rel="stylesheet" href="./mXF/module/default/index.css">
+		<div class="nav">
+			<ul class="left" onclick="window.history.back(-1);">
+				<li class="nav_icon_fanhui_left">&nbsp;</li>
+			</ul>
+			<ul class="center">
+				学费信息
+			</ul>
+			<ul class="right">
+				<li class="nav_icon_logo_cp">&nbsp;</li>
+			</ul>
+		</div>
+	</div>
+	<div class="titlebar01">
+		<div class="t">
+			缴费凭证上传
+		</div>
+	</div>
+	<div class="sfzfiles">
+		<ul class="scshuoming01 scshuoming03">
+			<div class="sfirst">
+				<span>*</span>缴费通知书
+			</div>
+			<li>&nbsp;需包含学生姓名/学校名字与官方校章(或LOGO)／金额，</li>
+			<li class="c">且需保证凭证金额与缴费金额一致。</li>
+		</ul>
+		<script type="text/javascript">
+			function clickscafile(obj){
+				function createObjectURL(blob) {
+					if (window.URL) {
+						return window.URL.createObjectURL(blob);
+					} else if (window.webkitURL) {
+						return window.webkitURL.createObjectURL(blob);
+					} else {
+						return null;
+					}
+				}
+				var createdl=document.createElement('dl');
+				var clickscfileVal = obj.parentNode.children[1].children[0];
+				clickscfileVal.click();
+				clickscfileVal.addEventListener('change', function() {
+					obj.innerHTML = "<img src=\""+createObjectURL(this.files[0])+"\"/>";
+					var createdlbox = obj.parentNode.parentNode.appendChild(createdl);
+					createdlbox.innerHTML = "<dt onclick=\"clickscafile(this)\"><img src=\" mXF/public/img/sfzfiles_icon_scmain02_bg.png \"  /> <dd><input type=\"file\" class=\"clickscafile\"></dd>";
+				}, false);
+			}
+		</script>
+		<div class="scmain02">
+			<dl>
+				<dt onclick="clickscafile(this)">
+					<img src="mXF/public/img/sfzfiles_icon_scmain02_bg.png" >
+				</dt>
+				<dd><input type="file" class="clickscafile"></dd>
+			</dl>
+		</div>
+		<div class="scshuoming02">
+			（图片支持的格式为：jpg、pdf、jpeg、gif、tiff、png、bmp，每个文件大小不超过2MB）
+		</div>
+	</div>
+	<div class="sbscmainbox">
+		<div class="titlebar01">
+			<div class="t">
+				信息填写与确认
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				<span>*</span>学号／申请号
+			</div>
+			<div class="r">
+				<input type="text" name="xuehaoshenqinghao" id="xuehaoshenqinghao" onchange="xuehaoshenqinghao()" placeholder="请输入数字或字母" />
+				<script type="text/javascript">
+				function xuehaoshenqinghao(){
+					var xuehaoshenqinghaoText = document.getElementById('xuehaoshenqinghao').value;
+					var xuehaoshenqinghaoreg = /^[\da-z]{1,20}$/i;  
+					if(!xuehaoshenqinghaoreg.test(xuehaoshenqinghaoText)){  
+						alert("请输入数字或字母");  
+						document.getElementById('xuehaoshenqinghao').value = '';
+					} 
+				}
+				</script>
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				护照号
+			</div>
+			<div class="r">
+				<input type="text" name="" id="checkhuzhao" onchange="checkhuzhao()" placeholder="请输入字母＋数字的组合（可选）" />
+				<script type="text/javascript">
+				function checkhuzhao(){
+					var checkhuzhaoText = document.getElementById('checkhuzhao').value;
+					var checkhuzhaoreg = /^[0-9a-zA-Z]+$/;  
+					if(!checkhuzhaoreg.test(checkhuzhaoText)){  
+						alert("请输入字母＋数字的组合");  
+						document.getElementById('checkhuzhao').value = '';
+					} 
+				}
+				</script>
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				参考号
+			</div>
+			<div class="r">
+				<input type="text" name="" id="" placeholder="（可选）"  />
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				<span>*</span>VitualAccount<br> 
+				&nbsp;&nbsp;Number
+			</div>
+			<div class="r">
+				<input type="text" name="VitualAccount" id="VitualAccount" onchange="VitualAccount()" placeholder="请输入数字" />
+				<script type="text/javascript">
+				function VitualAccount(){
+					var VitualAccounttest = document.getElementById('VitualAccount').value;
+					var VitualAccountreg = /^[0-9]*$/;  
+					if(!VitualAccountreg.test(VitualAccounttest)){  
+						alert("请输入纯数字"); 
+						document.getElementById('VitualAccount').value = '';
+					} 
+				}
+				</script>
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				<span>*</span>缴费截止日期
+			</div>
+			<div class="r">
+				<input type="date" class="bianan" value="2019-06-12" onchange="jiezhitime(this)"  />
+			</div>
+		</div>
+		<script type="text/javascript">
+			function jiezhitime(obj){
+				obj.style.color="black";
+			}
+		</script>
+		<div class="listbox04">
+			<div class="l">
+				<span>*</span>缴费周期
+			</div>
+			<div class="r">
+				<select name="" onchange="jiezhitime(this)" >
+					<option value="">一年期以内</option>
+					<option value="">二年期以内</option>
+				</select>
+			</div>
+		</div>
+		<div class="listbox04">
+			<div class="l">
+				备注
+			</div>
+			<div class="r">
+				<input type="text" name="" id="" placeholder="请输入备注信息（可选）"  />
+			</div>
+		</div>
+		<div class="btnbox01">
+			<div class="btn" onclick="window.location='index.4.html'">
+				下一步
+			</div>
+		</div>	
+	</div>
+	<div class="textbox01">
+		目前通过网络平台开展外汇按金交易未经批准，境内个人跨境境外购房、直接进行跨境证券投资，相关外汇业务属于资本项目项下业务，按照可兑换进程管理，目前尚未明确开放，直接或间接开展、参与上述相关外汇业务，涉嫌违规。请提高风险防范意识，谨防财产损失。
+	</div>
+	<div class="footerbox">
+		该学校缴费服务由合作商户－易思汇提供
+	</div>	
+</div>
+</body>
+</html>

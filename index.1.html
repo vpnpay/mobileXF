@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>跨境学费平台 上海银联电子支付服务有限公司提供全程的支付服务</title>
+	<script type="text/javascript">
+		document.addEventListener('plusready', function(){
+			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+			
+		});	
+	</script>
+	<link rel="stylesheet" href="./mXF/public/css/index.css">
+	<script src="./mXF/public/js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./mXF/public/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="mxfbg01">
+<div id="mxf">
+	<script type="text/javascript">
+		function openshuoming01(){
+			document.getElementById("shuoming01").style.display="flex";
+		}
+		function openshuoming02(){
+			document.getElementById("shuoming02").style.display="flex";
+		}
+		function closeshuoming01(){
+			document.getElementById("shuoming01").style.display="none";
+		}
+		function closeshuoming02(){
+			document.getElementById("shuoming02").style.display="none";
+		}
+		function openbaocuo01(){
+			document.getElementById("baocuo01").style.display="flex";
+		}
+		function closebaocuo01(obj){
+			obj.parentNode.parentNode.style.display="none";	
+		}
+	</script>
+	<div id="shuoming01" class="alertshuoming">
+		<div class="main">
+			<div class="tit">
+				说 明
+			</div>
+			<div class="content">
+				足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取
+			</div>
+			<div class="btn" onClick="closeshuoming01()">
+				确认
+			</div>
+		</div>
+	</div>
+	<div id="shuoming02" class="alertshuoming">
+		<div class="main">
+			<div class="tit">
+				说 明
+			</div>
+			<div class="content">
+				足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取足额到账费是资金在跨境付款是由银行收取
+			</div>
+			<div class="btn" onClick="closeshuoming02()">
+				确认
+			</div>
+		</div>
+	</div>
+	<div id="baocuo01" class="alertshuoming" style="display: none;">
+		<div class="main">
+			<div class="content02">
+				ERROR MESSAGE
+			</div>
+			<div class="btn" onClick="closebaocuo01(this)">
+				确认
+			</div>
+		</div>
+	</div>
+	<div class="navibar">
+		<!-- 头部个性化自定义样式 -->
+		<link rel="stylesheet" href="./mXF/module/default/index.css">
+		<div class="nav">
+			<ul class="left" onClick="window.history.back(-1);">
+				<li class="nav_icon_fanhui_left">&nbsp;</li>
+			</ul>
+			<ul class="center">
+				缴费金额
+			</ul>
+			<ul class="right">
+				<li class="nav_icon_logo_cp">&nbsp;</li>
+			</ul>
+		</div>
+	</div>
+	<div class="titlebar01">
+		<div class="t">
+			学校信息
+		</div>
+	</div>
+	<div class="schoolInf">
+		<div class="titlebar01a">
+			<div class="t">
+				Harvard  University
+			</div>
+		</div>
+		<div class="schoolInfMain">
+			<div class="lc">
+				<ul>
+					<li class="l">汇款账户</li>
+					<li class="c">CHINAPAY E-PAYMENT SERVICE (HONGKONG) CO LIMITED CHINAPAYCHINAPA</li>
+				</ul>
+				<ul>
+					<li class="l">汇款账号</li>
+					<li class="c">12345678</li>
+				</ul>
+			</div>
+			<ul class="r" onClick="openSchoolInfMainAlert()">
+				<img src="./mXF/public/img/schoolsearch_icon_next_second.png">
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function openSchoolInfMainAlert(){
+			document.getElementById("schoolInfAlertbox").style.display = "flex";
+		}
+		function schoolInfMainAlert(obj){
+			var schoolInfMainx = document.getElementsByClassName("schoolInfMainAlert");
+			var schoolInfMaini;
+			for (schoolInfMaini = 0; schoolInfMaini < schoolInfMainx.length; schoolInfMaini++) {
+			    schoolInfMainx[schoolInfMaini].children[1].children[0].style.display = "none";
+			}	
+			obj.children[1].children[0].style.display = "block";
+			setTimeout(function(){
+				document.getElementById("schoolInfAlertbox").style.display = "none";
+				document.getElementsByClassName("schoolInfMain")[0].children[0].innerHTML=obj.children[0].innerHTML;
+			},1000);
+		}
+	</script>
+	<div id="schoolInfAlertbox" style="display: none;">
+		<div class="schoolInfAlertbox">
+			<dl>
+				<dt>请选择</dt>
+				<dd class="schoolInfMain schoolInfMainAlert" onClick="schoolInfMainAlert(this)">
+					<div class="lc">
+						<ul>
+							<li class="l">汇款账户1</li>
+							<li class="c">CHINAPAY E-PAYMENT SERVICE (HONGKONG) CO LIMITED</li>
+						</ul>
+						<ul>
+							<li class="l">汇款账号</li>
+							<li class="c">12345678</li>
+						</ul>
+					</div>
+					<ul class="r">
+						<img src="./mXF/public/img/schoolInfAlertbox_icon_select_default.png" style="display: none;">
+					</ul>
+				</dd>
+				<dd class="schoolInfMain schoolInfMainAlert" onClick="schoolInfMainAlert(this)">
+					<div class="lc">
+						<ul>
+							<li class="l">汇款账户2</li>
+							<li class="c">CHINAPAY E-PAYMENT SERVICE (HONGKONG) CO LIMITED</li>
+						</ul>
+						<ul>
+							<li class="l">汇款账号</li>
+							<li class="c">12345678</li>
+						</ul>
+					</div>
+					<ul class="r">
+						<img src="./mXF/public/img/schoolInfAlertbox_icon_select_default.png" style="display: none;">
+					</ul>
+				</dd>
+				<dd class="schoolInfMain schoolInfMainAlert" onClick="schoolInfMainAlert(this)">
+					<div class="lc">
+						<ul>
+							<li class="l">汇款账户3</li>
+							<li class="c">CHINAPAY E-PAYMENT SERVICE (HONGKONG) CO LIMITED</li>
+						</ul>
+						<ul>
+							<li class="l">汇款账号</li>
+							<li class="c">12345678</li>
+						</ul>
+					</div>
+					<ul class="r">
+						<img src="./mXF/public/img/schoolInfAlertbox_icon_select_default.png" style="display: none;">
+					</ul>
+				</dd>
+				<dd class="schoolInfMain schoolInfMainAlert" onClick="schoolInfMainAlert(this)">
+					<div class="lc">
+						<ul>
+							<li class="l">汇款账户4</li>
+							<li class="c">CHINAPAY E-PAYMENT SERVICE (HONGKONG) CO LIMITED</li>
+						</ul>
+						<ul>
+							<li class="l">汇款账号</li>
+							<li class="c">12345678</li>
+						</ul>
+					</div>
+					<ul class="r">
+						<img src="./mXF/public/img/schoolInfAlertbox_icon_select_default.png" style="display: none;">
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="titlebar01">
+		<div class="t">
+			付款用途
+		</div>
+	</div>
+	<script type="text/javascript">
+		function schoolsearch_icon_select_l(obj){	
+			obj.parentNode.children[0].style.display = "none";
+			obj.parentNode.children[1].style.display = "block";
+			obj.parentNode.parentNode.children[2].children[0].style.display = "block";
+			obj.parentNode.parentNode.children[2].children[0].children[0].focus();
+			obj.parentNode.parentNode.children[2].children[0].children[0].classList.add("yxz");
+			sumofmoney();
+		}
+		function schoolsearch_icon_select_r(obj){	
+			obj.parentNode.children[0].style.display = "block";
+			obj.parentNode.children[1].style.display = "none";
+			obj.parentNode.parentNode.children[2].children[0].style.display = "none";
+			obj.parentNode.parentNode.children[2].children[0].children[0].classList.remove("yxz");
+			sumofmoney();
+		}
+	</script>
+	<div class="PurOfPay" id="PurOfPay">	
+		<div class="listbox02">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="l">
+				学费
+			</div>
+			<div class="c">
+				<span class="n"> 
+					<input name="a001" type="text" value="5000.00"  onblur="sumofmoney()" >
+				</span>
+			</div>
+			<div class="r">
+				USD
+			</div>
+		</div>
+		<div class="listbox02">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="l">
+				选修费
+			</div>
+			<div class="c">
+				<span class="n"> 
+					<input name="a001" type="text" value="5000.00"  onblur="sumofmoney()" >
+				</span>
+			</div>
+			<div class="r">
+				USD
+			</div>
+		</div>
+		<div class="listbox02">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="l">
+				书本费
+			</div>
+			<div class="c">
+				<span class="n"> 
+					<input name="a001" type="text" value="5000.00"  onblur="sumofmoney()" >
+				</span>
+			</div>
+			<div class="r">
+				USD
+			</div>
+		</div>
+		<div class="listbox02">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="l">
+				定金
+			</div>
+			<div class="c">
+				<span class="n"> 
+					<input name="a001" type="text" value="5000.00"  onblur="sumofmoney()" >
+				</span>
+			</div>
+			<div class="r">
+				USD
+			</div>
+		</div>
+		<div class="listbox02">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="l">
+				住宿费
+			</div>
+			<div class="c">
+				<span class="n"> 
+					<input name="a001" type="text" value="5000.00"  onblur="sumofmoney()" >
+				</span>
+			</div>
+			<div class="r">
+				USD
+			</div>
+		</div>
+		<div class="listbox02">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="l">
+				申请费
+			</div>
+			<div class="c">
+				<span class="n"> 
+					<input name="a001" type="text" value="5000.00"  onblur="sumofmoney()" >
+				</span>
+			</div>
+			<div class="r">
+				USD
+			</div>
+		</div>
+		<div class="listbox02">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="o">
+				使用足额到账服务（＋25 USD）
+			</div>
+			<div style="width: 0.01rem;">
+				<span><input name="a001" type="text" value="25" style="display: none;"></span>
+			</div>
+			<div class="r">
+				<p class="a" onClick="openshuoming01()">＊说明</p>
+			</div>
+			<script type="text/javascript">
+				
+			</script>
+		</div>
+		<div class="listbox02 listbox02n">
+			<div class="i">
+				<img src="./mXF/public/img/schoolsearch_icon_select_default.png" onClick="schoolsearch_icon_select_l(this)">
+				<img src="./mXF/public/img/schoolsearch_icon_select_active.png" style="display: none;" onClick="schoolsearch_icon_select_r(this)">
+			</div>
+			<div class="o">
+				使用入账费用服务（＋10 USD）
+			</div>
+			<div style="width: 0.01rem;">
+				<span><input name="a001" type="text" value="10" style="display: none;"></span>
+			</div>
+			<div class="r">
+				<p class="a" onClick="openshuoming02()">＊说明</p>
+			</div>
+		</div>
+	</div>
+	<div class="listbox03">
+		付款总金额  USD  &nbsp; <span id="sumofmoneysum"> 0000 </span>
+	</div>
+	<div class="listbox03 listbox033" id="listbox033">
+		付款总金额  $  &nbsp; <span id="sumofmoneysum"> .... </span>
+	</div>
+	<script type="text/javascript">
+		var sumofmoneysum;
+		function sumofmoney(){
+			sumofmoneysum = 0;
+			var sumofmoneyboxs = document.getElementById("PurOfPay").getElementsByTagName("input");
+				for(var i=0;i<sumofmoneyboxs.length;i++){
+					if(sumofmoneyboxs[i].className == "yxz"){ 
+						sumofmoneysum += parseInt(sumofmoneyboxs[i].value,10);
+					}
+				}
+			document.getElementById("sumofmoneysum").innerHTML=sumofmoneysum;
+		}
+		function testsumofmoney(){
+			if(sumofmoneysum == 0){
+				openbaocuo01();
+			}else{
+				window.location.href="index.2.html"; 
+			}
+		}
+		function listbox033(){
+			document.getElementById("listbox033").style.display = "flex";
+		}
+	</script>
+	<div class="btnbox01">
+		<div class="btnjrss" onClick="listbox033()">
+			金额试算
+		</div>
+		<div class="btn" onClick="testsumofmoney()">
+			下一步
+		</div>
+	</div>	
+	<div class="textbox01">
+		目前通过网络平台开展外汇按金交易未经批准，境内个人跨境境外购房、直接进行跨境证券投资，相关外汇业务属于资本项目项下业务，按照可兑换进程管理，目前尚未明确开放，直接或间接开展、参与上述相关外汇业务，涉嫌违规。请提高风险防范意识，谨防财产损失。
+	</div>
+	<div class="footerbox">
+		该学校缴费服务由合作商户－易思汇提供
+	</div>	
+</div>
+	
+</body>
+</html>

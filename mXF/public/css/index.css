@@ -28,7 +28,7 @@ body.f5{ background: #F5F5F9;}
 #mxf .btnbox01 .btn{ width: 6.88rem; height: 0.99rem; background: #00a0e9; border:1px solid #00a0e9; border-radius: 0.5rem; color: #fff; font-size: 0.32rem;margin: auto; display: flex; justify-content: center; align-items:center; }
 #mxf .btnbox02 .btn{ width: 6.88rem; height: 0.99rem; background: none; border:1px solid #00a0e9; border-radius: 0.5rem; color: #00A0E9; font-size: 0.32rem;margin: auto; display: flex; justify-content: center; align-items:center; }
 #mxf .btnbox01 .btnjrss{width: 6.88rem; height: 0.99rem;border:1px solid #00a0e9; border-radius: 0.5rem; font-size: 0.32rem;margin: auto; display: flex; justify-content: center; align-items:center; background: #fff; color: #00A0E9; margin-bottom: 0.3rem; }
-#mxf .btnbox01 .alertbox{ position: absolute; left: 0; top: 0; width: 100%; min-height: 100%; display: flex; background: rgba(0,0,0,0.5); }
+#mxf .btnbox01 .alertbox{ position: fixed; left: 0; top: 0; width: 100%; min-height: 100%; display: flex; background: rgba(0,0,0,0.5); }
 #mxf .btnbox01 .alertbox .box{ width: 5.4rem; height: 3rem; border-radius: 0.08rem; margin: auto; background: #fff; }
 #mxf .btnbox01 .alertbox .box .main{ font-size: 0.24rem; height: 1.97rem; border-bottom: 1px solid #ddd; display: flex; justify-content: center; align-items: center; }
 #mxf .btnbox01 .alertbox .box .nbtn{ height: 1rem; display: flex; justify-content: center; align-items: center; }
@@ -93,7 +93,7 @@ body.f5{ background: #F5F5F9;}
 #mxf .listbox07 dl.listboxActive{ border:1px solid #00A0E9;}
 #mxf .listbox07 dl.listboxActive dt{background: url(../img/listbox07_icon_select_active.png) no-repeat 50% 50%; background-size:0.28rem ;}
 
-#mxf .listbox08{ width: 7.06rem; height: 4.08rem; margin: 0.2rem auto; border:1px dashed #00A0E9; background: rgba(0,160,233,0.1); display: flex; justify-content: center; align-items: center;}
+#mxf .listbox08{ width: 7.06rem; height: 4.08rem; margin: 0.2rem auto; border:1px dashed #00A0E9; background: rgba(229,245,253,0.5); display: flex; justify-content: center; align-items: center;}
 #mxf .listbox08 .main{ width: 6rem; height: 3rem; display: flex; flex-direction: column; justify-content: space-between; }
 #mxf .listbox08 .main dl{ display: flex; justify-content: space-between;}
 #mxf .listbox08 .main dl dt{ color: #666;}
@@ -101,7 +101,7 @@ body.f5{ background: #F5F5F9;}
 #mxf .listbox08 .main dl dd.scr{text-align: right;}
 #mxf .listbox08 .main dl dd span.a{ color: #C30D23; font-size: 0.36rem;  font-weight: bold;}
 #mxf .listbox08 .main dl dd span.b{ color: #C30D23; font-size: 0.4rem; font-family: arial; font-weight: bold;}
-#mxf .listbox08 .main ul{width: 100%; height: 1px; border-bottom:1px solid #00A0E9;}
+#mxf .listbox08 .main ul{width: 100%; height: 1px; border-bottom:1px solid #53c8fe;}
 #mxf .listbox09 a{ margin-left:0.56rem; margin-right:0.56rem; height: 0.52rem; font-size: 0.22rem; color: #00A0E9; display: flex; align-items: center; justify-content: flex-end; }
 #mxf .listbox10{margin-left:0.52rem; font-size: 0.21rem; height: 0.72rem; display: flex; align-items: center; position: relative;}
 #mxf .listbox10 span{ color: #00A0E9; }
@@ -118,9 +118,13 @@ body.f5{ background: #F5F5F9;}
 #mxf .listbox14 .tabletttd{ width: 2rem; height: 0.67rem;border-left: 1px solid #ddd;border-right: 1px solid #ddd; display: flex; align-items: center; justify-content: center;  } 
 #mxf .listbox14 .tabletd{ width: 2rem; height: 0.67rem; display: flex; align-items: center; border-right: 1px solid #ddd;justify-content: center; } 
 #mxf .listbox14 .tabletdb{ width: 4rem;}
-#mxf .listbox15{ width: 5.88rem; min-height: 6.34rem; line-height: 1.3; margin: 0.4rem auto; background: rgba(0,160,233,0.2); padding: 0.2rem;}
-#mxf .listbox16{ font-size: 0.24rem; width: 6.3rem; margin:1.1rem auto 0 auto;}
+#mxf .listbox15{ width:6rem; min-height: 6.34rem; font-size: 0.22rem; line-height: 1.3; margin: 0.4rem auto;  }
+#mxf .listbox15 p.imgss{ text-align: center;}
+#mxf .listbox15 p.imgss img{ width: 4.3rem; margin: 0.3rem auto 0.25rem auto;}
+#mxf .listbox15 p.imgss img.b{ width: 6.2rem; margin: 0.3rem auto 0 auto;}
+#mxf .listbox16{ font-size: 0.24rem;  width: 6.3rem; margin:1.1rem auto 0 auto;}
 #mxf .listbox16 p{ padding-bottom: 0.35rem;}
+#mxf .listbox16 p a{ color: #666;}
 
 #mxf .listbox03{ height: 1rem; background: #fff; font-size: 0.3rem; display: flex; align-items: center; justify-content: flex-end; padding-right: 0.6rem; }
 #mxf .titlebar01{ background: #00A0E9; height: 0.45rem; font-size: 0.21rem; color: #fff; padding-left: 0.2rem; display: flex; }
@@ -128,7 +132,7 @@ body.f5{ background: #F5F5F9;}
 #mxf .schoolInf{ height: 2.1rem; min-height: 2.1rem; background: #e5f5fd; }
 #mxf .titlebar01a{height: 0.56rem; font-size: 0.24rem; color: #231815; padding-left: 0.2rem; display: flex; }
 #mxf .titlebar01a .t{ margin: auto 0; }
-#mxf .titlebar02{ color: #00A0E9; height: 0.6rem; padding-left: 0.62rem; background: rgba(0,160,233,0.3); font-size: 0.3rem; display: flex; align-items: center;}
+#mxf .titlebar02{ color: #00A0E9; height: 0.6rem; padding-left: 0.62rem; background: rgba(0,160,233,0.3); font-size: 0.26rem; display: flex; align-items: center;}
 #mxf .titlebar03{color: #00A0E9; height: 1.2rem; padding-left: 0.62rem; padding-right: 0.62rem; background: rgba(0,160,233,0.3); color: #231815; display: flex; justify-content: space-between; align-items: center; }
 #mxf .titlebar03 .l{ font-size: 0.24rem;}
 #mxf .titlebar03 .r{ font-size: 0.36rem;}
@@ -165,6 +169,7 @@ body.f5{ background: #F5F5F9;}
 #mxf .alertshuoming .xieyi .content{ width: 5.8rem; height: 10.5rem;  line-height: 1.3; overflow: scroll; margin: auto; font-size: 0.21rem; color: #999; }
 
 #mxf .sfzfiles .scshuoming01{width: 6.7rem; margin: auto; padding-top: 0.87rem; padding-bottom: 0.27rem; font-size: 0.24rem; line-height: 1.3; }
+#mxf .sfzfiles .scshuoming01 .dd{ }
 #mxf .sfzfiles .scshuoming03{padding-top: 0.45rem;padding-bottom: 0.62rem;}
 #mxf .sfzfiles .scshuoming03 .sfirst{font-size: 0.21rem; padding-bottom: 0.2rem;}
 #mxf .sfzfiles .scshuoming03 .sfirst span{color: #C30D23;}
@@ -174,14 +179,17 @@ body.f5{ background: #F5F5F9;}
 #mxf .sfzfiles .scmain dl dt{ border:1px dashed #ddd; height: 2.05rem; display: flex; justify-content: center; align-items: center;}
 #mxf .sfzfiles .scmain dl dt img{ width: 3.04rem; height: 1.96rem;}
 #mxf .sfzfiles .scmain dl dd{ text-align: center; padding-top: 0.15rem; padding-bottom: 0.24rem; font-size: 0.21rem; color: #666;}
-#mxf .sfzfiles .scshuoming02{ clear: both; width: 6.72rem;margin: auto; text-align: center; font-size: 0.21rem; color: #C30D23; padding:0.4rem 0 0.2rem 0;}
+#mxf .sfzfiles .scshuoming02{ clear: both; width: 6.72rem;margin: auto; text-align: center; font-size: 0.21rem; color: #C30D23; padding:0.2rem 0 0.2rem 0;}
 #mxf .btnbox01 ul.sc{ position: fixed; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0,0,0,0.5); z-index: 2; display: none; justify-content: center; align-items: center;}
 #mxf .btnbox01 ul.sc li{ width: 4.35rem; height: 2.15rem; background: #fff; border-radius: 0.08rem;display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.24rem;}
 
 
 #mxf .sbscmainbox .sbscmainboxsm{ padding-top: 0.35rem; color: #EA5514; font-size: 0.21rem; text-align: center;}
 #mxf .sfzfiles .scmain02{width: 6.72rem; margin: auto; padding-bottom: 0.2rem;  }
-#mxf .sfzfiles .scmain02 dl{ width: 2rem; height: 1.3rem; margin-right: 0.2rem; margin-bottom: 0.2rem; border:1px dashed #ddd; float: left; }
+#mxf .sfzfiles .scmain02 dl{ width: 2rem; height: 1.3rem; margin-right: 1.32rem; margin-bottom: 0.2rem; border:1px dashed #ddd; float: left; }
+#mxf .sfzfiles .scmain02 dl:nth-child(even){
+        margin-left: 1.32rem;margin-right: 0rem;
+    }
 #mxf .sfzfiles .scmain02 dl dt img{width: 2rem; height: 1.3rem;}
 #mxf .sfzfiles .scmain02 dl dd{ display: none;}
 

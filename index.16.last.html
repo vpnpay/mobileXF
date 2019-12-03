@@ -24,7 +24,7 @@
 				<li class="nav_icon_fanhui_left">&nbsp;</li>
 			</ul>
 			<ul class="center">
-				学生信息
+				上传凭证
 			</ul>
 			<ul class="right">
 				<li class="nav_icon_logo_cp">&nbsp;</li>
@@ -38,8 +38,7 @@
 	</div>
 	<div class="sfzfiles">
 		<ul class="scshuoming01">
-			<li>根据国家相关法律法规，为保证您能够成功</li>
-			<li>支付境外学校相关费用，请按要求上传凭证，谢谢</li>
+			<li style="color: #F39800;">请参照未通过审核的原因，重新上传必要的影印文件或照片</li>
 		</ul>
 		<script>
 			function clickscfile(obj){
@@ -72,81 +71,66 @@
 			</dl>
 		</div>
 		<div class="scshuoming02">
-			（图片支持的格式为：jpg、pdf、jpeg、gif、tiff、png、bmp，每个文件大小不超过2MB）
+			（图片支持的格式为：jpg、pdf、jpeg、gif、tiff、png、bmp，每个文件大小不超过5MB）
 		</div>
 	</div>
-	<div class="btnbox01" onclick="openSbscmainbox(this)">
-		<div class="btn">
-			证件识别
+	
+	<div class="titlebar01">
+		<div class="t">
+			缴费凭证上传
 		</div>
-		<ul class="sc">
-			<li>上传中，请稍后…</li>
+	</div>
+	<div class="sfzfiles">
+		<ul class="scshuoming01 scshuoming03">
+			<div class="sfirst">
+				<span>*</span>缴费通知书＋其他凭证
+			</div>
+			<li>&nbsp;需包含学生姓名/学校名字与官方校章(或LOGO)／金额，</li>
+			<li class="c">且需保证凭证金额与缴费金额一致。</li>
 		</ul>
+		<script type="text/javascript">
+			function clickscafile(obj){
+				function createObjectURL(blob) {
+					if (window.URL) {
+						return window.URL.createObjectURL(blob);
+					} else if (window.webkitURL) {
+						return window.webkitURL.createObjectURL(blob);
+					} else {
+						return null;
+					}
+				}
+				var createdl=document.createElement('dl');
+				var clickscfileVal = obj.parentNode.children[1].children[0];
+				clickscfileVal.click();
+				clickscfileVal.addEventListener('change', function() {
+					obj.innerHTML = "<img src=\""+createObjectURL(this.files[0])+"\"/>";
+					var createdlbox = obj.parentNode.parentNode.appendChild(createdl);
+					createdlbox.innerHTML = "<dt onclick=\"clickscafile(this)\"><img src=\" mXF/public/img/sfzfiles_icon_scmain02_bg.png \"  /> <dd><input type=\"file\" class=\"clickscafile\"></dd>";
+				}, false);
+			}
+		</script>
+		<div class="scmain02">
+			<dl>
+				<dt onclick="clickscafile(this)">
+					<img src="mXF/public/img/sfzfiles_icon_scmain02_bg.png" >
+				</dt>
+				<dd><input type="file" class="clickscafile"></dd>
+			</dl>
+			<dl>
+				<dt onclick="clickscafile(this)">
+					<img src="mXF/public/img/sfzfiles_icon_scmain02_bg.png" >
+				</dt>
+				<dd><input type="file" class="clickscafile"></dd>
+			</dl>
+		</div>
+		<div class="scshuoming02">
+			（图片支持的格式为：jpg、jpeg、gif、png、bmp，最多上传6个文件，每个文件大小不超过2MB）
+		</div>
 	</div>
-	<script type="text/javascript">
-		function openSbscmainbox(obj){
-			obj.children[1].style.display="flex";
-			document.getElementsByClassName("sbscmainbox")[0].style.display="none";
-			setTimeout(function(){
-				document.getElementsByClassName("sbscmainbox")[0].style.display="block";
-				obj.children[1].style.display="none";
-			},2000);
-		}
-	</script>
-	<div class="sbscmainbox" style="display: none;">
-		<div class="titlebar01">
-			<div class="t">
-				信息填写与确认
-			</div>
+	<div class="btnbox01">
+		<div class="btn">
+			提 交
 		</div>
-		<div class="listbox04">
-			<div class="l">
-				姓名中文
-			</div>
-			<div class="r">
-				<input type="text" name="" id="" value="东方不败" />
-			</div>
-		</div>
-		<div class="listbox04">
-			<div class="l">
-				姓－拼音
-			</div>
-			<div class="r">
-				<input type="text" name="" id="" value="dong" />
-			</div>
-		</div>
-		<div class="listbox04">
-			<div class="l">
-				名－拼音
-			</div>
-			<div class="r">
-				<input type="text" name="" id="" value="fang" />
-			</div>
-		</div>
-		<div class="listbox04">
-			<div class="l">
-				证件号码
-			</div>
-			<div class="r">
-				<input type="text" name="" id="" value="320998189901990091" />
-			</div>
-		</div>
-		<div class="listbox04">
-			<div class="l">
-				地 &nbsp;&nbsp;&nbsp;&nbsp; 址
-			</div>
-			<div class="r">
-				<input type="text" name="" id="" value="中国上海市浦东新区" />
-			</div>
-		</div>
-		<div class="sbscmainboxsm">
-			以上信息为自动识别结果，如有误差可手动编辑
-		</div>
-		<div class="btnbox01">
-			<div class="btn" onclick="window.location='index.3.html'">
-				下一步
-			</div>
-		</div>	
 	</div>
 	<div class="textbox01">
 		目前通过网络平台开展外汇按金交易未经批准，境内个人跨境境外购房、直接进行跨境证券投资，相关外汇业务属于资本项目项下业务，按照可兑换进程管理，目前尚未明确开放，直接或间接开展、参与上述相关外汇业务，涉嫌违规。请提高风险防范意识，谨防财产损失。

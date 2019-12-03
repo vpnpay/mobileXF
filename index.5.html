@@ -14,7 +14,7 @@
 	<script src="./mXF/public/js/index.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./mXF/public/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
-<body class="mxfbg01">
+<body class="">
 <div id="mxf">
 	<script type="text/javascript">
 		function closexieyi01(){
@@ -234,7 +234,20 @@
 				<input type="radio" name="payboxSelectbank" />
 			</div>
 		</div>
-		<div class="paybox01">
+		<style>
+			@media screen and (max-width:998px){
+				body #mxf .sbscmainbox .paybox01xyspc{ display:none;}
+				body #mxf .sbscmainbox .paybox01xysyd{ display:flex;}
+			}
+			@media screen and (min-width:999px){
+				body #mxf .sbscmainbox .paybox01xyspc{ display:flex;}
+				body #mxf .sbscmainbox .paybox01xysyd{ display:none;}
+			}
+		</style>
+		<script>
+
+		</script>
+		<div class="paybox01 paybox01xyspc">
 			<div class="l" onClick="payboxSelectbank(this)" >
 				<img src="mXF/public/img/paybox01_icon_logo_yinlian.png" >
 			</div>
@@ -256,6 +269,31 @@
 			</div>
 			<div class="o" onClick="payboxSelectbank(this)" >
 				<img src="mXF/public/img/paybox01_icon_select_default.png" class="payboxSelectbank" >
+				<input type="radio" name="payboxSelectbank" />
+			</div>
+		</div>
+		<div class="paybox01 paybox01xysyd">
+			<div class="l" >
+				<img src="mXF/public/img/paybox01_icon_logo_yinlian.png" >
+			</div>
+			<div class="c" >
+				<div class="ca">
+					在线支付              
+				</div>
+				<div class="cb">
+					中国银联在线支付     
+				</div>
+			</div>
+			<div class="r">
+				<div class="ra">
+					¥6988.00 
+				</div>
+				<div class="rb" onClick="window.location='index.10.html'">
+					点击查看详情
+				</div>
+			</div>
+			<div class="o"  >
+				<img src="mXF/public/img/paybox01_icon_select_def.png" class="payboxSelectbank" >
 				<input type="radio" name="payboxSelectbank" />
 			</div>
 		</div>
